@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/handler/:path*",
+      "destination": "https://admin.app.build/handler/:path*"
+    }
+  ]
+}
