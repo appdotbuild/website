@@ -7,9 +7,4 @@ import YouTubeIcon from '@/svgs/shared/menu/youtube.inline.svg';
 
 export const MENU_ICONS = {
   github: GitHubIcon,
-  youtube: YouTubeIcon,
-  linkedIn: LinkedInIcon,
-  xCom: XIcon,
-  facebook: FacebookIcon,
-  neon: NeonIcon,
 };

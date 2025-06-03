@@ -62,7 +62,6 @@ async function Footer() {
                 rel="noopener noreferrer"
               >
                 <Icon className="!size-4" />
-                <span className="">{title}</span>
               </Link>
             );
           })}
