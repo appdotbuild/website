@@ -1,0 +1,99 @@
+{
+  "name": "App.Build",
+  "short_name": "App.Build",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon/favicon-48x48.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-72x72.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-96x96.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-144x144.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-192x192.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon/favicon-256x256.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-384x384.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-512x512.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon/dark/favicon-48x48.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "48x48",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-72x72.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "72x72",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-96x96.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "96x96",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-144x144.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "144x144",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-192x192.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-256x256.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "256x256",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-384x384.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "384x384",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark)"
+    },
+    {
+      "src": "/favicon/dark/favicon-512x512.png?v=efaeb1338576162536b9ba2bb4754ba4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "media": "(prefers-color-scheme: dark)"
+    }
+  ]
+}

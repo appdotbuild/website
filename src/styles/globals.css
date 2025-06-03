@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --page-background: 300 5% 96%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 85%;
+    --input: 240 6% 75%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-[1216px] px-5 md:px-8 xl:px-0;
+  }
+
+  .page-background {
+    position: relative;
+    background-color: hsl(var(--page-background));
+
+    &:before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      background-image: url(/images/noise-pixels.png);
+      background-size: 1024px;
+      background-position: center;
+      background-repeat: repeat;
+      opacity: 0.7;
+    }
+  }
+}
+
+@layer utilities {
+  .border-grid {
+    @apply border-border/30;
+  }
+
+  .remove-autocomplete-styles:-webkit-autofill,
+  .remove-autocomplete-styles:-webkit-autofill:focus,
+  .remove-autocomplete-styles:-webkit-autofill:hover {
+    -webkit-transition: background-color 5000s, color 5000s;
+    transition: background-color 5000s, color 5000s;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

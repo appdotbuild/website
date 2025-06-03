@@ -1,0 +1,301 @@
+.prose {
+  @apply tracking-tight text-foreground;
+
+  @apply prose-headings:text-3xl prose-headings:font-semibold prose-headings:text-foreground;
+
+  @apply prose-p:text-foreground/90;
+
+  @apply prose-h2:mb-4 prose-h2:mt-11 prose-h2:scroll-mt-8 prose-h2:text-2xl prose-h2:font-semibold prose-h2:leading-tight prose-h2:-tracking-tighter md:prose-h2:mt-14 md:prose-h2:text-3xl md:prose-h2:leading-tight;
+
+  @apply prose-h3:mb-4 prose-h3:mt-8 prose-h3:scroll-mt-6 prose-h3:text-xl prose-h3:font-semibold prose-h3:leading-snug prose-h3:-tracking-tighter;
+
+  @apply prose-h4:mb-2.5 prose-h4:mt-6 prose-h4:text-lg prose-h4:font-medium prose-h4:-tracking-tighter;
+
+  @apply prose-p:my-6 prose-p:overflow-x-auto prose-p:leading-normal prose-p:-tracking-tighter;
+
+  @apply prose-a:break-words prose-a:rounded-sm prose-a:font-normal prose-a:text-[#E66C15] prose-a:no-underline prose-a:opacity-90 prose-a:transition-colors prose-a:duration-200 hover:prose-a:text-orange focus-visible:prose-a:outline focus-visible:prose-a:outline-2 focus-visible:prose-a:outline-offset-2 focus-visible:prose-a:outline-orange;
+
+  @apply prose-ol:flex prose-ol:flex-col prose-ul:flex prose-ul:flex-col;
+
+  @apply prose-ul:my-6 prose-ul:gap-y-2.5 prose-ul:pl-8 md:prose-ul:pl-11;
+
+  @apply prose-ol:my-6 prose-ol:gap-y-2.5 prose-ol:pl-7 md:prose-ol:pl-10;
+
+  @apply prose-li:m-0 prose-li:leading-normal prose-li:-tracking-tighter prose-li:text-foreground/90;
+
+  @apply prose-strong:font-medium prose-strong:text-foreground;
+
+  @apply prose-figure:my-8;
+
+  @apply prose-hr:my-8 prose-hr:border-border;
+
+  @apply prose-blockquote:text-foreground;
+
+  @apply prose-img:my-0 prose-img:rounded-lg;
+
+  > * {
+    &:last-child {
+      @apply !mb-0;
+    }
+  }
+
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  .not-prose {
+    table a {
+      @apply break-words rounded-sm font-normal text-primary-foreground underline decoration-transparent underline-offset-[0.3em] transition-colors duration-200 hover:decoration-primary-foreground;
+    }
+  }
+
+  h2 + p,
+  h3 + p,
+  h4 + p {
+    @apply mt-0;
+  }
+
+  h2 + h3 {
+    @apply mt-6;
+  }
+
+  h2 + h4,
+  h3 + h4 {
+    @apply mt-0;
+  }
+
+  a {
+    @apply hover:decoration-orange;
+
+    strong {
+      @apply text-primary-foreground transition-colors duration-200 hover:text-primary-foreground/80;
+    }
+  }
+
+  ol ol,
+  ul ol {
+    @apply mb-0 mt-2.5 pl-5;
+  }
+  ol ul,
+  ul ul {
+    @apply mb-0 mt-2.5 pl-6;
+  }
+
+  ol strong,
+  ul strong {
+    @apply font-medium;
+  }
+
+  ul {
+    @apply prose-li:marker:text-[0px];
+
+    li {
+      @apply relative;
+
+      @apply before:absolute before:-left-6 before:top-3 before:h-px before:w-2 before:rounded-full before:bg-secondary-foreground md:before:top-3.5;
+    }
+  }
+
+  ol {
+    li {
+      @apply relative pl-1;
+    }
+    li::marker {
+      @apply !text-foreground;
+    }
+  }
+
+  li {
+    padding-inline-start: 0;
+
+    > * {
+      &:first-child:not(ol, ul) {
+        @apply mt-0;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+
+  figure.code-block {
+    @apply my-8;
+  }
+
+  figure.custom-table {
+    @apply my-8 flex;
+
+    table {
+      @apply mx-5 min-w-[46rem] border-separate border-spacing-0 md:mx-0 md:min-w-full;
+
+      & th {
+        @apply min-w-36 border-b border-border pb-1.5 text-left align-top text-sm font-medium leading-snug -tracking-tighter text-foreground;
+      }
+
+      & td {
+        @apply min-w-36 border-b border-border pb-3 pr-10 pt-3 text-left align-top text-sm leading-snug -tracking-tighter text-secondary-foreground;
+      }
+
+      & tr:last-child td {
+        @apply border-b-0;
+      }
+    }
+
+    &.theme-filled {
+      table {
+        @apply overflow-hidden rounded-lg border border-border bg-primary-foreground;
+
+        & th {
+          @apply border-b-0 border-r border-foreground/10 bg-secondary px-5 py-3;
+
+          &:first-child {
+            @apply pl-4;
+          }
+
+          &:last-child {
+            @apply pr-4;
+          }
+        }
+
+        & th:last-child,
+        & tr td:last-child {
+          @apply border-r-0;
+        }
+
+        & td {
+          @apply border-r border-border px-5;
+
+          &:first-child {
+            @apply pl-4;
+          }
+
+          &:last-child {
+            @apply pr-4;
+          }
+        }
+
+        & code {
+          @apply bg-background;
+        }
+      }
+    }
+
+    & code {
+      @apply w-max max-w-[30ch] rounded border-border bg-primary-foreground px-1 pb-1 pt-0.5 text-sm leading-normal;
+    }
+  }
+
+  pre.shiki {
+    @apply my-0 overflow-x-auto rounded-sm p-0 leading-normal;
+
+    & code {
+      @apply border-none;
+
+      & span {
+        @apply text-sm;
+      }
+    }
+  }
+
+  :not(pre) {
+    > code {
+      @apply mx-1 inline-flex max-w-full overflow-x-auto rounded border border-border bg-muted/40 px-1 text-sm font-normal -tracking-tighter text-foreground before:hidden after:hidden;
+
+      &:not(:first-child) {
+        @apply ml-[3px];
+      }
+    }
+
+    table {
+      td code:first-child {
+        @apply ml-0;
+      }
+    }
+  }
+
+  a {
+    code {
+      @apply text-orange;
+    }
+  }
+
+  p:has(> img) {
+    @apply my-8;
+  }
+
+  .prose-inside-content {
+    & > *,
+    & .prose > * {
+      @apply my-2.5;
+    }
+
+    & > *,
+    & .prose > * {
+      &:first-child:not(h2) {
+        @apply mt-0;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+
+    & .code-block {
+      @apply my-4;
+    }
+
+    :not(pre) > code {
+      @apply border text-sm;
+    }
+
+    p {
+      @apply my-2.5 text-base leading-snug -tracking-tighter;
+    }
+
+    ol,
+    ul {
+      @apply my-2.5 flex flex-col gap-y-2.5 pl-5;
+    }
+
+    ol,
+    ul {
+      li {
+        @apply text-base leading-snug -tracking-tighter before:-left-5 before:top-2.5;
+      }
+    }
+  }
+
+  .accordion {
+    & :not(.prose-inside-content) h3 {
+      @apply my-0;
+    }
+  }
+
+  ol.steps {
+    @apply my-8 pl-0;
+
+    li {
+      @apply pl-0;
+    }
+
+    & .steps-content > * {
+      &:first-child:not(h2) {
+        @apply mt-0;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+.prose-lg {
+  @apply text-base -tracking-tighter md:text-lg md:leading-normal;
+}
