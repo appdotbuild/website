@@ -70,13 +70,13 @@ function Hero() {
               <DecorationSquare className="absolute -right-[98px] -top-0.5 z-10 md:-right-[66px] lg:-right-[98px]" />
             </div>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-36">
-              <span className="bg-orange pb-px md:pb-1">app.build generates</span> real apps from
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
+              <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
               scratch on top of the <a href="http://neon.com">Neon</a> platform. Generated apps use
               Neon Postgres, Neon Auth and other incoming Neon features.
             </p>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-36">
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
               It is fully open source, local-first, and built for developers. It serves as a
               reference implementation for any codegen product looking to build on top of Neon.
             </p>
