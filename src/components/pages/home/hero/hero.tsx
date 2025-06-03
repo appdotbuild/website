@@ -72,7 +72,7 @@ function Hero() {
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
               <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
-              scratch on top of the <a href="http://neon.com">Neon</a> platform. Generated apps use
+              scratch on top of the <a href="http://neon.com" className="underline">Neon</a> platform. Generated apps use
               Neon Postgres, Neon Auth and other incoming Neon features.
             </p>
 
