@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 import { ROUTE } from '@/constants/route';
 
-import githubIcon from '@/svgs/github-white-logo.svg';
+import gitHubIcon from '@/svgs/github-white-logo.svg';
 import logo from '@/svgs/logo.svg';
 
 import MobileMenu from './mobile-menu';
@@ -52,7 +52,7 @@ async function Header() {
             </Link>
             <Button variant="secondary" size="sm" asChild>
               <Link href={buttonUrl} target="_blank">
-                <Image className="w-3" src={githubIcon} width={16} height={16} alt="" />
+                <Image className="w-3" src={gitHubIcon} width={16} height={16} alt="" />
                 {buttonName}
               </Link>
             </Button>

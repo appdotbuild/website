@@ -15,7 +15,7 @@ import { useMobileMenu } from '@/hooks/use-mobile-menu';
 
 import { ROUTE } from '@/constants/route';
 
-import githubIcon from '@/svgs/github-white-logo.svg';
+import gitHubIcon from '@/svgs/github-white-logo.svg';
 
 const ANIMATION_DURATION = 0.2;
 
@@ -84,8 +84,8 @@ function MobileMenu({ isDraftMode, items }: { isDraftMode: boolean; items: IMenu
                 <div className="grid grid-cols-1 gap-5 p-5 md:p-8">
                   <Button variant="secondary" size="xl" asChild>
                     <Link href={ROUTE.github}>
-                      <Image src={githubIcon} width={16} height={16} alt="" />
-                      Github
+                      <Image src={gitHubIcon} width={16} height={16} alt="" />
+                      GitHub
                     </Link>
                   </Button>
                 </div>

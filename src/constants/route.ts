@@ -6,6 +6,6 @@ export const ROUTE: Record<string, Route<string> | URL> = {
   blogRss: '/blog/rss.xml' as Route<string>,
   neon: 'https://neon.com' as Route<string>,
   github: 'https://github.com/appdotbuild' as Route<string>,
-  agentGithub: 'https://github.com/appdotbuild/agent' as Route<string>,
-  platformGithub: 'https://github.com/appdotbuild/platform' as Route<string>,
+  agentGitHub: 'https://github.com/appdotbuild/agent' as Route<string>,
+  platformGitHub: 'https://github.com/appdotbuild/platform' as Route<string>,
 };

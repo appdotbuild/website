@@ -16,7 +16,7 @@ import bgPattern1 from '@/svgs/pages/home/hero/bg-pattern-1.svg';
 import bgPattern2 from '@/svgs/pages/home/hero/bg-pattern-2.svg';
 import bgPattern3 from '@/svgs/pages/home/hero/bg-pattern-3.svg';
 import bgPattern4 from '@/svgs/pages/home/hero/bg-pattern-4.svg';
-import GithubIcon from '@/svgs/shared/menu/github.inline.svg';
+import GitHubIcon from '@/svgs/shared/menu/github.inline.svg';
 
 function DecorationSquare({ className }: { className?: string }) {
   return <span className={cn('h-1.5 w-1.5 rotate-45 bg-[#808080]', className)} aria-hidden />;
@@ -79,14 +79,14 @@ function Hero() {
 
             <div className="mt-8 flex flex-col items-center gap-x-6 gap-y-2.5 px-5 md:mt-6 md:flex-row md:px-8 lg:mt-10 lg:px-8">
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
-                <Link href={ROUTE.agentGithub} target="_blank">
-                  <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
+                <Link href={ROUTE.agentGitHub} target="_blank">
+                  <GitHubIcon className="size-3.5 lg:size-4" aria-hidden />
                   Agent code
                 </Link>
               </Button>
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
-                <Link href={ROUTE.platformGithub} target="_blank">
-                  <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
+                <Link href={ROUTE.platformGitHub} target="_blank">
+                  <GitHubIcon className="size-3.5 lg:size-4" aria-hidden />
                   CLI & platform code
                 </Link>
               </Button>
