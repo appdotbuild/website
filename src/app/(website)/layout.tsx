@@ -1,3 +1,4 @@
+import type { Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import { ReactNode } from 'react';
@@ -33,9 +34,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   );
 }
 
-export const viewport = {
+export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#fff',
+  themeColor: '#f5f5f4',
 };
