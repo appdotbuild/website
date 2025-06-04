@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:next": "next build",
+    "build": "turbo run build:next",
     "postbuild": "next-sitemap",
     "start": "next start",
     "deploy-graphql": "sanity graphql deploy",
     "deploy-graphql:tag": "node scripts/deploy-graphql.js",
-    "type-check": "tsc",
-    "lint": "next lint & npm run lint:md",
+    "type-check": "tsc --noEmit",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "lint:md": "markdownlint --ignore-path .gitignore . --config ./markdownlint-config.js",
     "lint:md:fix": "markdownlint --fix --ignore-path .gitignore . --config ./markdownlint-config.js",
-    "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,json}\"",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "update-git-hooks": "npx simple-git-hooks",
     "prepare": "npm run update-git-hooks"
   },
@@ -92,7 +95,9 @@
     "svgo-loader": "^4.0.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.3",
+    "turbo": "^2.5.4",
     "typescript": "^5.4.5",
     "url-loader": "^4.1.1"
-  }
+  },
+  "packageManager": "npm@10.4.0"
 }
