@@ -123,7 +123,13 @@ function Hero() {
               <div className="flex items-center gap-x-6">
                 <Link href="https://v0.dev" target="_blank">
                   <span className="sr-only">V0 dev link</span>
-                  <Image className="h-7 w-auto md:h-8" src={v0Logo} alt="" width={56} height={32} />
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={v0Logo}
+                    alt="v0 Logo"
+                    width={56}
+                    height={32}
+                  />
                 </Link>
 
                 <Link href="https://create.xyz" target="_blank">
@@ -131,7 +137,7 @@ function Hero() {
                   <Image
                     className="h-7 w-auto md:h-8"
                     src={createLogo}
-                    alt=""
+                    alt="Create.xyz logo"
                     width={111}
                     height={28}
                   />
@@ -142,7 +148,7 @@ function Hero() {
                   <Image
                     className="h-7 w-auto md:h-8"
                     src={replitLogo}
-                    alt=""
+                    alt="Replit logo"
                     width={112}
                     height={26}
                   />
@@ -153,7 +159,7 @@ function Hero() {
                   <Image
                     className="h-7 w-auto md:h-8"
                     src={sameLogo}
-                    alt=""
+                    alt="Same.new logo"
                     width={32}
                     height={32}
                   />
