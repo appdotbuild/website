@@ -45,3 +45,8 @@ next-env.d.ts
 
 # eslint
 .eslintcache
+
+# sitemaps
+public/robots.txt
+public/sitemap-0.xml
+public/sitemap.xml
