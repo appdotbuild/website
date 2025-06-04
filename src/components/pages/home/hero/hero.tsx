@@ -114,6 +114,10 @@ function Hero() {
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
               <div className="flex items-center gap-x-8">
+                <a href="https://v0.dev" target="_blank">
+                  <Image src={`/images/v0-logo-light.svg`} alt="V0 logo" width={40} height={1} />
+                </a>
+
                 <a href="https://create.xyz" target="_blank">
                   <Image
                     src={`/images/create-logo-light.svg`}
