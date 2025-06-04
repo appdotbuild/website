@@ -18,6 +18,7 @@ import bgPattern2 from '@/svgs/pages/home/hero/bg-pattern-2.svg';
 import bgPattern3 from '@/svgs/pages/home/hero/bg-pattern-3.svg';
 import bgPattern4 from '@/svgs/pages/home/hero/bg-pattern-4.svg';
 import createLogo from '@/svgs/pages/home/hero/create-logo-light.svg';
+import replitLogo from '@/svgs/pages/home/hero/replit-logo-light.svg';
 import sameLogo from '@/svgs/pages/home/hero/same-logo-light.svg';
 import v0Logo from '@/svgs/pages/home/hero/v0-logo-light.svg';
 import GithubIcon from '@/svgs/shared/menu/github.inline.svg';
@@ -48,7 +49,7 @@ function Hero() {
             AI agent that builds <br className="block md:hidden xl:block" />
             full-stack apps
             <span
-              className="absolute -top-[49px] left-0 h-9 w-2 bg-orange md:-top-[62px] md:h-12 md:w-3 lg:-top-[72px] lg:h-14 lg:w-4"
+              className="absolute -top-[49px] left-0 h-9 w-2 bg-blue md:-top-[62px] md:h-12 md:w-3 lg:-top-[72px] lg:h-14 lg:w-4"
               aria-hidden
             />
           </h1>
@@ -75,8 +76,8 @@ function Hero() {
             </div>
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
-              <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
-              scratch on top of the{' '}
+              <span className="bg-blue-light pb-px text-white md:pb-1">app.build</span> generates
+              real apps from scratch on top of the{' '}
               <Link href="http://neon.com" target="_blank" className="underline">
                 Neon
               </Link>{' '}
@@ -115,25 +116,47 @@ function Hero() {
               </Button>
             </div>
 
-            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
-              Inspired by:
-            </p>
-
-            <div className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
-              <div className="flex items-center gap-x-8">
+            <div className="mt-12 flex flex-wrap gap-x-5 gap-y-4 px-5 font-mono text-16 leading-normal -tracking-tightest md:items-center md:px-8 lg:px-8 lg:text-left lg:text-18">
+              <p className="text-16 leading-normal -tracking-tightest opacity-70 lg:text-left">
+                Inspired by:
+              </p>
+              <div className="flex items-center gap-x-6">
                 <Link href="https://v0.dev" target="_blank">
                   <span className="sr-only">V0 dev link</span>
-                  <Image src={v0Logo} alt="" width={40} height={20} />
+                  <Image className="h-7 w-auto md:h-8" src={v0Logo} alt="" width={56} height={32} />
                 </Link>
 
                 <Link href="https://create.xyz" target="_blank">
                   <span className="sr-only">create.xyz link</span>
-                  <Image src={createLogo} alt="Create.xyz logo" width={99} height={25} />
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={createLogo}
+                    alt=""
+                    width={38}
+                    height={32}
+                  />
+                </Link>
+
+                <Link href="https://replit.com" target="_blank">
+                  <span className="sr-only">Replit link</span>
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={replitLogo}
+                    alt=""
+                    width={27}
+                    height={32}
+                  />
                 </Link>
 
                 <Link href="https://same.new" target="_blank">
                   <span className="sr-only">same.new link</span>
-                  <Image src={sameLogo} alt="Same.new logo" width={26} height={26} />
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={sameLogo}
+                    alt=""
+                    width={32}
+                    height={32}
+                  />
                 </Link>
               </div>
             </div>

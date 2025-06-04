@@ -95,6 +95,7 @@ module.exports = {
         98: 'hsl(210 20% 98%)',
       },
       blue: '#7C78DE',
+      'blue-light': '#7D7DE8',
       orange: '#FF8126',
     }),
     extend: {

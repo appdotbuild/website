@@ -13,7 +13,7 @@
 
   @apply prose-p:my-6 prose-p:overflow-x-auto prose-p:leading-normal prose-p:-tracking-tighter;
 
-  @apply prose-a:break-words prose-a:rounded-sm prose-a:font-normal prose-a:text-[#E66C15] prose-a:no-underline prose-a:opacity-90 prose-a:transition-colors prose-a:duration-200 hover:prose-a:text-orange focus-visible:prose-a:outline focus-visible:prose-a:outline-2 focus-visible:prose-a:outline-offset-2 focus-visible:prose-a:outline-orange;
+  @apply prose-a:break-words prose-a:rounded-sm prose-a:font-normal prose-a:text-[#4040DD]/90 prose-a:no-underline prose-a:opacity-90 prose-a:transition-colors prose-a:duration-200 hover:prose-a:text-blue/90 focus-visible:prose-a:outline focus-visible:prose-a:outline-2 focus-visible:prose-a:outline-offset-2 focus-visible:prose-a:outline-blue-light;
 
   @apply prose-ol:flex prose-ol:flex-col prose-ul:flex prose-ul:flex-col;
 
@@ -70,7 +70,7 @@
   }
 
   a {
-    @apply hover:decoration-orange;
+    @apply hover:decoration-blue;
 
     strong {
       @apply text-primary-foreground transition-colors duration-200 hover:text-primary-foreground/80;
@@ -221,7 +221,7 @@
 
   a {
     code {
-      @apply text-orange;
+      @apply text-blue;
     }
   }
 

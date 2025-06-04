@@ -70,7 +70,7 @@ export function Tabs({ labels, defaultValue, children, className }: TabsProps) {
                 <TabsTrigger
                   className={cn(
                     'relative h-11 px-4 font-semibold leading-none tracking-tight text-muted-foreground',
-                    'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
+                    'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-light',
                     'hover:text-foreground/80 hover:after:opacity-20',
                     "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-foreground after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out after:content-['']",
                     'data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:after:opacity-100',

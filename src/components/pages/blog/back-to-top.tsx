@@ -38,7 +38,7 @@ function BackToTop({ className, label = 'Back to top' }: IScrollToTopProps) {
         {visible ? (
           <m.button
             className={cn(
-              'flex w-fit items-center gap-2 rounded-full text-sm leading-snug tracking-tight text-muted-foreground transition-colors duration-300 hover:text-secondary-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
+              'flex w-fit items-center gap-2 rounded-full text-sm leading-snug tracking-tight text-muted-foreground transition-colors duration-300 hover:text-secondary-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-light',
               className,
             )}
             type="button"

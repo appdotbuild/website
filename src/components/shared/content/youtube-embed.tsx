@@ -53,7 +53,7 @@ function YouTubeEmbed({
       )}
     >
       <button
-        className="w-full rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-orange"
+        className="w-full rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue-light"
         role="button"
         onClick={handleVideoClick}
       >
@@ -61,7 +61,7 @@ function YouTubeEmbed({
           {children}
         </div>
         <div
-          className="absolute left-4 top-4 flex h-8 items-center justify-center gap-x-2 rounded-full bg-background px-3 text-xs font-semibold tracking-tight shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange lg:left-6 lg:top-6 lg:pl-3 lg:pr-4"
+          className="absolute left-4 top-4 flex h-8 items-center justify-center gap-x-2 rounded-full bg-background px-3 text-xs font-semibold tracking-tight shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-light lg:left-6 lg:top-6 lg:pl-3 lg:pr-4"
           tabIndex={isVideoActive ? -1 : 0}
         >
           <Play className="shrink-0" size={14} />

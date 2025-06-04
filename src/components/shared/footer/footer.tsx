@@ -15,8 +15,8 @@ async function Footer() {
   const { links, social } = await getFooterMenus(isDraftMode);
 
   return (
-    <footer className="relative px-safe pb-safe-or-6">
-      <div className="container relative flex flex-col items-start justify-between gap-9 border-t border-border pt-5 md:flex-row md:items-center md:pt-6">
+    <footer className="relative border-t border-border px-safe pb-safe-or-6">
+      <div className="container relative flex flex-col items-start justify-between gap-9 pt-5 md:flex-row md:items-center md:pt-6">
         <Link className="-m-2 block p-2" href={ROUTE.index}>
           <Image src={logo} width={112} height={21} alt="" />
           <span className="sr-only">app.build</span>
