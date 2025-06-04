@@ -44,7 +44,7 @@ async function Footer() {
         )}
         <p className="text-14 font-medium text-foreground md:absolute md:left-1/2 md:-translate-x-1/2">
           Built by{' '}
-          <Link href={ROUTE.neon} target="_blank">
+          <Link href={ROUTE.neon} target="_blank" className="underline">
             Neon
           </Link>
         </p>

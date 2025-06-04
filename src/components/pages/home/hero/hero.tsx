@@ -72,8 +72,12 @@ function Hero() {
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
               <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
-              scratch on top of the <a href="http://neon.com" className="underline">Neon</a> platform. Generated apps use
-              Neon Postgres, Neon Auth and other incoming Neon features.
+              scratch on top of the{' '}
+              <a href="http://neon.com" target="_blank" className="underline">
+                Neon
+              </a>{' '}
+              platform. Generated apps use Neon Postgres, Neon Auth and other incoming Neon
+              features.
             </p>
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
@@ -81,20 +85,54 @@ function Hero() {
               reference implementation for any codegen product looking to build on top of Neon.
             </p>
 
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+              Learn more in our{' '}
+              <a href="/blog/app-build-open-source-ai-agent" className="underline">
+                launch blog post
+              </a>
+              .
+            </p>
+
             <div className="mt-8 flex flex-col items-center gap-x-6 gap-y-2.5 px-5 md:mt-6 md:flex-row md:px-8 lg:mt-10 lg:px-8">
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
                 <Link href={ROUTE.agentGithub} target="_blank">
                   <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
-                  Agent code
+                  Agent Code
                 </Link>
               </Button>
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
                 <Link href={ROUTE.platformGithub} target="_blank">
                   <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
-                  CLI & platform code
+                  CLI & Platform Code
                 </Link>
               </Button>
             </div>
+
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+              Inspired by:
+            </p>
+
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+              <div className="flex items-center gap-x-8">
+                <a href="https://create.xyz" target="_blank">
+                  <Image
+                    src={`/images/create-logo-light.svg`}
+                    alt="Create.xyz logo"
+                    width={100}
+                    height={1}
+                  />
+                </a>
+
+                <a href="https://same.new" target="_blank">
+                  <Image
+                    src={`/images/same-logo-light.svg`}
+                    alt="Same.new logo"
+                    width={30}
+                    height={1}
+                  />
+                </a>
+              </div>
+            </p>
 
             <span
               className="absolute -left-24 top-0 h-full w-px border-l border-dashed border-black/20 md:-left-16 lg:-left-24"
