@@ -1,3 +1,4 @@
+import type { Route } from 'next';
 import Image from 'next/image';
 
 import { Button } from '@/components/shared/button';
@@ -16,6 +17,9 @@ import bgPattern1 from '@/svgs/pages/home/hero/bg-pattern-1.svg';
 import bgPattern2 from '@/svgs/pages/home/hero/bg-pattern-2.svg';
 import bgPattern3 from '@/svgs/pages/home/hero/bg-pattern-3.svg';
 import bgPattern4 from '@/svgs/pages/home/hero/bg-pattern-4.svg';
+import createLogo from '@/svgs/pages/home/hero/create-logo-light.svg';
+import sameLogo from '@/svgs/pages/home/hero/same-logo-light.svg';
+import v0Logo from '@/svgs/pages/home/hero/v0-logo-light.svg';
 import GithubIcon from '@/svgs/shared/menu/github.inline.svg';
 
 function DecorationSquare({ className }: { className?: string }) {
@@ -73,23 +77,26 @@ function Hero() {
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
               <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
               scratch on top of the{' '}
-              <a href="http://neon.com" target="_blank" className="underline">
+              <Link href="http://neon.com" target="_blank" className="underline">
                 Neon
-              </a>{' '}
+              </Link>{' '}
               platform. Generated apps use Neon Postgres, Neon Auth and other incoming Neon
               features.
             </p>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
               It is fully open source, local-first, and built for developers. It serves as a
               reference implementation for any codegen product looking to build on top of Neon.
             </p>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
               Learn more in our{' '}
-              <a href="/blog/app-build-open-source-ai-agent" className="underline">
+              <Link
+                href={'/blog/app-build-open-source-ai-agent' as Route<string>}
+                className="underline"
+              >
                 launch blog post
-              </a>
+              </Link>
               .
             </p>
 
@@ -108,35 +115,28 @@ function Hero() {
               </Button>
             </div>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
               Inspired by:
             </p>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+            <div className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
               <div className="flex items-center gap-x-8">
-                <a href="https://v0.dev" target="_blank">
-                  <Image src={`/images/v0-logo-light.svg`} alt="V0 logo" width={40} height={1} />
-                </a>
+                <Link href="https://v0.dev" target="_blank">
+                  <span className="sr-only">V0 dev link</span>
+                  <Image src={v0Logo} alt="" width={40} height={20} />
+                </Link>
 
-                <a href="https://create.xyz" target="_blank">
-                  <Image
-                    src={`/images/create-logo-light.svg`}
-                    alt="Create.xyz logo"
-                    width={100}
-                    height={1}
-                  />
-                </a>
+                <Link href="https://create.xyz" target="_blank">
+                  <span className="sr-only">create.xyz link</span>
+                  <Image src={createLogo} alt="Create.xyz logo" width={99} height={25} />
+                </Link>
 
-                <a href="https://same.new" target="_blank">
-                  <Image
-                    src={`/images/same-logo-light.svg`}
-                    alt="Same.new logo"
-                    width={30}
-                    height={1}
-                  />
-                </a>
+                <Link href="https://same.new" target="_blank">
+                  <span className="sr-only">same.new link</span>
+                  <Image src={sameLogo} alt="Same.new logo" width={26} height={26} />
+                </Link>
               </div>
-            </p>
+            </div>
 
             <span
               className="absolute -left-24 top-0 h-full w-px border-l border-dashed border-black/20 md:-left-16 lg:-left-24"
