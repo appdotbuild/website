@@ -132,8 +132,8 @@ function Hero() {
                     className="h-7 w-auto md:h-8"
                     src={createLogo}
                     alt=""
-                    width={38}
-                    height={32}
+                    width={111}
+                    height={28}
                   />
                 </Link>
 
@@ -143,8 +143,8 @@ function Hero() {
                     className="h-7 w-auto md:h-8"
                     src={replitLogo}
                     alt=""
-                    width={27}
-                    height={32}
+                    width={112}
+                    height={26}
                   />
                 </Link>
 
