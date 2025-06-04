@@ -66,7 +66,7 @@ function SearchBar({
       <DialogTrigger asChild>
         <Button
           className={cn(
-            'relative h-8 w-full justify-start border border-input bg-white/50 px-4 text-13 font-normal text-muted-foreground shadow-none hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange lg:h-8 lg:px-4 [&_svg]:size-3.5',
+            'relative h-8 w-full justify-start border border-input bg-white/50 px-4 text-13 font-normal text-muted-foreground shadow-none hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue lg:h-8 lg:px-4 [&_svg]:size-3.5',
             className,
           )}
           variant={variant}

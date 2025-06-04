@@ -110,7 +110,7 @@ function CodeBlockWrapper({
         <button
           className={cn(
             'absolute right-2 top-2.5 flex size-7 items-center justify-center rounded border border-border bg-popover text-muted-foreground',
-            'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
+            'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue',
             'transition-colors duration-300 hover:text-foreground/80 md:group-focus-within:opacity-100 md:group-hover:opacity-100',
             isCopied && 'text-foreground/80',
             isCustom &&

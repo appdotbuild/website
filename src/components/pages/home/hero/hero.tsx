@@ -1,3 +1,4 @@
+import type { Route } from 'next';
 import Image from 'next/image';
 
 import { Button } from '@/components/shared/button';
@@ -9,13 +10,17 @@ import { cn } from '@/lib/utils';
 import { ROUTE } from '@/constants/route';
 
 import heroBgIllustration from '@/images/pages/home/hero/hero-bg.jpg';
-import heroIllustrationMd from '@/images/pages/home/hero/illustration-md.jpg';
-import heroIllustration from '@/images/pages/home/hero/illustration.jpg';
 
 import bgPattern1 from '@/svgs/pages/home/hero/bg-pattern-1.svg';
 import bgPattern2 from '@/svgs/pages/home/hero/bg-pattern-2.svg';
 import bgPattern3 from '@/svgs/pages/home/hero/bg-pattern-3.svg';
 import bgPattern4 from '@/svgs/pages/home/hero/bg-pattern-4.svg';
+import createLogo from '@/svgs/pages/home/hero/create-logo-light.svg';
+import heroIllustrationMd from '@/svgs/pages/home/hero/illustration-md.svg';
+import heroIllustration from '@/svgs/pages/home/hero/illustration.svg';
+import replitLogo from '@/svgs/pages/home/hero/replit-logo-light.svg';
+import sameLogo from '@/svgs/pages/home/hero/same-logo-light.svg';
+import v0Logo from '@/svgs/pages/home/hero/v0-logo-light.svg';
 import GithubIcon from '@/svgs/shared/menu/github.inline.svg';
 
 function DecorationSquare({ className }: { className?: string }) {
@@ -44,11 +49,11 @@ function Hero() {
             AI agent that builds <br className="block md:hidden xl:block" />
             full-stack apps
             <span
-              className="absolute -top-[49px] left-0 h-9 w-2 bg-orange md:-top-[62px] md:h-12 md:w-3 lg:-top-[72px] lg:h-14 lg:w-4"
+              className="absolute -top-[49px] left-0 h-9 w-2 bg-blue md:-top-[62px] md:h-12 md:w-3 lg:-top-[72px] lg:h-14 lg:w-4"
               aria-hidden
             />
           </h1>
-          <div className="relative mt-[38px] pb-14 md:mt-12 md:pb-[70px] lg:mt-14 lg:pb-[78px] xl:mt-16 xl:pb-[85px]">
+          <div className="relative mt-[38px] pb-5 md:mt-12 md:pb-6 lg:mt-14 lg:pb-7 xl:mt-16 xl:pb-8">
             <div className="relative">
               <CodeBlock
                 className="rounded-none border-0 pb-5 md:pb-0"
@@ -70,30 +75,90 @@ function Hero() {
               <DecorationSquare className="absolute -right-[98px] -top-0.5 z-10 md:-right-[66px] lg:-right-[98px]" />
             </div>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
-              <span className="bg-orange pb-px md:pb-1">app.build</span> generates real apps from
-              scratch on top of the <a href="http://neon.com" className="underline">Neon</a> platform. Generated apps use
-              Neon Postgres, Neon Auth and other incoming Neon features.
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-20">
+              <span className="bg-blue pb-px text-white md:pb-1">app.build</span> generates real
+              apps from scratch on top of the{' '}
+              <Link href="http://neon.com" target="_blank" className="underline">
+                Neon
+              </Link>{' '}
+              platform. Generated apps use Neon Postgres, Neon Auth and other incoming Neon
+              features.
             </p>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-12">
+            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
               It is fully open source, local-first, and built for developers. It serves as a
               reference implementation for any codegen product looking to build on top of Neon.
+            </p>
+
+            <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
+              Learn more in our{' '}
+              <Link
+                href={'/blog/app-build-open-source-ai-agent' as Route<string>}
+                className="underline"
+              >
+                launch blog post
+              </Link>
+              .
             </p>
 
             <div className="mt-8 flex flex-col items-center gap-x-6 gap-y-2.5 px-5 md:mt-6 md:flex-row md:px-8 lg:mt-10 lg:px-8">
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
                 <Link href={ROUTE.agentGithub} target="_blank">
                   <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
-                  Agent code
+                  Agent Code
                 </Link>
               </Button>
               <Button className="w-full gap-x-1.5 md:w-auto" variant="gradient" size="lg" asChild>
                 <Link href={ROUTE.platformGithub} target="_blank">
                   <GithubIcon className="size-3.5 lg:size-4" aria-hidden />
-                  CLI & platform code
+                  CLI & Platform Code
                 </Link>
               </Button>
+            </div>
+
+            <div className="mt-16 flex flex-wrap gap-x-5 gap-y-4 px-5 font-mono text-16 leading-normal -tracking-tightest md:items-center md:px-8 lg:px-8 lg:text-left lg:text-18">
+              <p className="text-16 leading-normal -tracking-tightest opacity-70 lg:text-left">
+                Inspired by:
+              </p>
+              <div className="flex items-center gap-x-6">
+                <Link href="https://v0.dev" target="_blank">
+                  <span className="sr-only">V0 dev link</span>
+                  <Image className="h-7 w-auto md:h-8" src={v0Logo} alt="" width={56} height={32} />
+                </Link>
+
+                <Link href="https://create.xyz" target="_blank">
+                  <span className="sr-only">create.xyz link</span>
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={createLogo}
+                    alt=""
+                    width={111}
+                    height={28}
+                  />
+                </Link>
+
+                <Link href="https://replit.com" target="_blank">
+                  <span className="sr-only">Replit link</span>
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={replitLogo}
+                    alt=""
+                    width={112}
+                    height={26}
+                  />
+                </Link>
+
+                <Link href="https://same.new" target="_blank">
+                  <span className="sr-only">same.new link</span>
+                  <Image
+                    className="h-7 w-auto md:h-8"
+                    src={sameLogo}
+                    alt=""
+                    width={32}
+                    height={32}
+                  />
+                </Link>
+              </div>
             </div>
 
             <span
@@ -138,7 +203,6 @@ function Hero() {
               width={324}
               height={321}
               alt=""
-              quality={99}
               priority
             />
             <Image
@@ -147,7 +211,6 @@ function Hero() {
               width={770}
               height={510}
               alt=""
-              quality={99}
               priority
             />
             <Image
