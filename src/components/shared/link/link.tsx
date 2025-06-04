@@ -9,7 +9,7 @@ import { type VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const linkVariants = cva(
-  'gap-x-[0.375rem] [&_svg]:shrink-0 inline-flex items-center font-medium -tracking-tighter transition-colors focus-visible:outline-2 focus-visible:outline focus-visible:outline-blue-light focus-visible:outline-offset-2',
+  'gap-x-[0.375rem] [&_svg]:shrink-0 inline-flex items-center font-medium -tracking-tighter transition-colors focus-visible:outline-2 focus-visible:outline focus-visible:outline-blue focus-visible:outline-offset-2',
   {
     variants: {
       variant: {

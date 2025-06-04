@@ -29,7 +29,7 @@ function FeaturedPost({ className, posts }: IFeaturedPostProps) {
         <article className="flex flex-col gap-y-3 lg:gap-y-4">
           <h1 className="line-clamp-3 text-xl font-medium leading-snug -tracking-tightest transition-colors duration-300 hover:text-foreground/80 md:text-2xl md:leading-snug lg:line-clamp-2 lg:text-3xl lg:leading-tight">
             <NextLink
-              className="focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue-light"
+              className="focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue"
               href={featuredPost.pathname}
             >
               {featuredPost.title}
@@ -42,7 +42,7 @@ function FeaturedPost({ className, posts }: IFeaturedPostProps) {
               <CategoryAndDate publishedAt={publishedAt} />
               <h1 className="line-clamp-2 text-lg font-medium leading-tight -tracking-tightest transition-colors duration-300 hover:text-foreground/80 lg:text-xl lg:leading-snug">
                 <NextLink
-                  className="focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue-light"
+                  className="focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue"
                   href={pathname}
                 >
                   {title}

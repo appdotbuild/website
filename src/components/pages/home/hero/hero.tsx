@@ -76,8 +76,8 @@ function Hero() {
             </div>
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-20">
-              <span className="bg-blue-light pb-px text-white md:pb-1">app.build</span> generates
-              real apps from scratch on top of the{' '}
+              <span className="bg-blue pb-px text-white md:pb-1">app.build</span> generates real
+              apps from scratch on top of the{' '}
               <Link href="http://neon.com" target="_blank" className="underline">
                 Neon
               </Link>{' '}
