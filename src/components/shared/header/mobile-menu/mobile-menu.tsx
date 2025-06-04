@@ -85,7 +85,7 @@ function MobileMenu({ isDraftMode, items }: { isDraftMode: boolean; items: IMenu
                   <Button variant="secondary" size="xl" asChild>
                     <Link href={ROUTE.github}>
                       <Image src={githubIcon} width={16} height={16} alt="" />
-                      Github
+                      GitHub
                     </Link>
                   </Button>
                 </div>
