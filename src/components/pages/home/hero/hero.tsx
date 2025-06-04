@@ -10,14 +10,14 @@ import { cn } from '@/lib/utils';
 import { ROUTE } from '@/constants/route';
 
 import heroBgIllustration from '@/images/pages/home/hero/hero-bg.jpg';
-import heroIllustrationMd from '@/images/pages/home/hero/illustration-md.jpg';
-import heroIllustration from '@/images/pages/home/hero/illustration.jpg';
 
 import bgPattern1 from '@/svgs/pages/home/hero/bg-pattern-1.svg';
 import bgPattern2 from '@/svgs/pages/home/hero/bg-pattern-2.svg';
 import bgPattern3 from '@/svgs/pages/home/hero/bg-pattern-3.svg';
 import bgPattern4 from '@/svgs/pages/home/hero/bg-pattern-4.svg';
 import createLogo from '@/svgs/pages/home/hero/create-logo-light.svg';
+import heroIllustrationMd from '@/svgs/pages/home/hero/illustration-md.svg';
+import heroIllustration from '@/svgs/pages/home/hero/illustration.svg';
 import replitLogo from '@/svgs/pages/home/hero/replit-logo-light.svg';
 import sameLogo from '@/svgs/pages/home/hero/same-logo-light.svg';
 import v0Logo from '@/svgs/pages/home/hero/v0-logo-light.svg';
@@ -53,7 +53,7 @@ function Hero() {
               aria-hidden
             />
           </h1>
-          <div className="relative mt-[38px] pb-14 md:mt-12 md:pb-[70px] lg:mt-14 lg:pb-[78px] xl:mt-16 xl:pb-[85px]">
+          <div className="relative mt-[38px] pb-5 md:mt-12 md:pb-6 lg:mt-14 lg:pb-7 xl:mt-16 xl:pb-8">
             <div className="relative">
               <CodeBlock
                 className="rounded-none border-0 pb-5 md:pb-0"
@@ -75,7 +75,7 @@ function Hero() {
               <DecorationSquare className="absolute -right-[98px] -top-0.5 z-10 md:-right-[66px] lg:-right-[98px]" />
             </div>
 
-            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-16">
+            <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-20">
               <span className="bg-blue-light pb-px text-white md:pb-1">app.build</span> generates
               real apps from scratch on top of the{' '}
               <Link href="http://neon.com" target="_blank" className="underline">
@@ -116,7 +116,7 @@ function Hero() {
               </Button>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-x-5 gap-y-4 px-5 font-mono text-16 leading-normal -tracking-tightest md:items-center md:px-8 lg:px-8 lg:text-left lg:text-18">
+            <div className="mt-16 flex flex-wrap gap-x-5 gap-y-4 px-5 font-mono text-16 leading-normal -tracking-tightest md:items-center md:px-8 lg:px-8 lg:text-left lg:text-18">
               <p className="text-16 leading-normal -tracking-tightest opacity-70 lg:text-left">
                 Inspired by:
               </p>
@@ -203,7 +203,6 @@ function Hero() {
               width={324}
               height={321}
               alt=""
-              quality={99}
               priority
             />
             <Image
@@ -212,7 +211,6 @@ function Hero() {
               width={770}
               height={510}
               alt=""
-              quality={99}
               priority
             />
             <Image
