@@ -76,13 +76,13 @@ function Hero() {
             </div>
 
             <p className="mt-20 px-5 font-mono text-16 leading-normal -tracking-tightest md:mt-32 md:px-8 lg:mt-[135px] lg:px-8 lg:text-left lg:text-18 xl:mt-20">
-              <span className="bg-blue pb-px text-white md:pb-1">app.build</span> generates real
-              apps from scratch on top of the{' '}
+              <span className="bg-blue pb-px text-white md:pb-1">app.build</span> creates real apps
+              from scratch on top of the{' '}
               <Link href="http://neon.com" target="_blank" className="underline">
                 Neon
               </Link>{' '}
-              platform. Generated apps use Neon Postgres, Neon Auth and other incoming Neon
-              features.
+              platform. By default, generated apps use Neon Postgres, Neon Auth and other incoming
+              Neon features (but you can also bring your own templates).
             </p>
 
             <p className="mt-6 px-5 font-mono text-16 leading-normal -tracking-tightest md:px-8 lg:px-8 lg:text-left lg:text-18">
