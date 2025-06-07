@@ -97,6 +97,10 @@ function Hero() {
                 className="underline"
               >
                 launch blog post
+              </Link>{' '}
+              and{' '}
+              <Link href={'https://neon.com/docs/ai/ai-app-build'} className="underline">
+                in our docs
               </Link>
               .
             </p>
