@@ -59,6 +59,7 @@ function Hero() {
                 className="rounded-none border-0 pb-5 md:pb-0"
                 code={'npx @app.build/cli'}
                 language="json"
+                copyEventName="Homepage code copy"
                 isCustom
               />
               <span

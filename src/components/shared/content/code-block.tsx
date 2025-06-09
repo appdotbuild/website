@@ -25,6 +25,7 @@ interface CodeBlockProps extends ICodeBlock {
   className?: string;
   as?: 'figure' | 'div';
   isCustom?: boolean;
+  copyEventName?: string;
   children?: React.ReactElement<CodeChildProps> | React.ReactNode;
 }
 
@@ -37,6 +38,7 @@ async function CodeBlock({
   children,
   highlightedLines,
   isCustom = false,
+  copyEventName,
 }: CodeBlockProps) {
   const childrenElement = React.isValidElement(children)
     ? (children as React.ReactElement<CodeChildProps>)
@@ -57,7 +59,13 @@ async function CodeBlock({
   const countLines = html.split('\n').length;
 
   return (
-    <CodeBlockWrapper className={className} fileName={resolvedFileName} as={as} isCustom={isCustom}>
+    <CodeBlockWrapper
+      className={className}
+      fileName={resolvedFileName}
+      as={as}
+      isCustom={isCustom}
+      copyEventName={copyEventName}
+    >
       <ScrollArea className="w-full">
         <div
           className={cn(

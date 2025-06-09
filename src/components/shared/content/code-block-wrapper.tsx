@@ -4,6 +4,8 @@ import { ReactElement, ReactNode, isValidElement } from 'react';
 
 import { Check, Copy } from 'lucide-react';
 
+import { Button } from '@/components/shared/button';
+
 import { cn } from '@/lib/utils';
 
 import useCopyToClipboard from '@/hooks/use-copy-to-clipboard';
@@ -14,6 +16,7 @@ interface ICodeBlockWrapperProps {
   className?: string;
   children?: ReactNode;
   fileName?: string;
+  copyEventName?: string;
 }
 
 type ExpectedProps = {
@@ -87,6 +90,7 @@ function CodeBlockWrapper({
   className = '',
   children,
   fileName,
+  copyEventName,
 }: ICodeBlockWrapperProps) {
   const { isCopied, handleCopy } = useCopyToClipboard(3000);
 
@@ -107,7 +111,7 @@ function CodeBlockWrapper({
       )}
       <div className="relative">
         {children}
-        <button
+        <Button
           className={cn(
             'absolute right-2 top-2.5 flex size-7 items-center justify-center rounded border border-border bg-popover text-muted-foreground',
             'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue',
@@ -118,6 +122,9 @@ function CodeBlockWrapper({
           )}
           disabled={isCopied}
           aria-label={cn(isCopied ? 'Copied' : 'Copy')}
+          eventName={copyEventName || 'Copy code'}
+          variant="none"
+          size="none"
           onClick={() => handleCopy(code)}
         >
           {isCopied ? <Check size={isCustom ? 16 : 18} /> : <Copy size={isCustom ? 16 : 18} />}
@@ -126,7 +133,7 @@ function CodeBlockWrapper({
               {isCopied ? 'Copied' : 'Copy'}
             </span>
           )}
-        </button>
+        </Button>
       </div>
     </Tag>
   );

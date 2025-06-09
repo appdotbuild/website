@@ -1,8 +1,12 @@
+'use client';
+
 import * as React from 'react';
 
 import { Slot } from '@radix-ui/react-slot';
 import { type VariantProps, cva } from 'class-variance-authority';
 
+import getNodeText from '@/lib/get-node-text';
+import sendSegmentEvent from '@/lib/send-segment-event';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
@@ -19,6 +23,7 @@ const buttonVariants = cva(
         outline:
           'shadow-xs border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        none: '',
       },
       size: {
         default: 'h-9 px-4 py-2 text-sm',
@@ -29,6 +34,7 @@ const buttonVariants = cva(
         xl: 'h-11 px-10 text-[15px] leading-none -tracking-tighter',
         icon: 'size-9',
         badge: 'h-5.5 px-2.5 py-1 text-11 leading-tight -tracking-tighter',
+        none: '',
       },
     },
     defaultVariants: {
@@ -48,14 +54,40 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  eventName?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  children?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, eventName, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
 
+    const handleAnalytics = (eventType = 'clicked', customText?: string) => {
+      const text = customText || getNodeText(children);
+      sendSegmentEvent(`Button ${eventType}`, {
+        text,
+        theme: variant,
+        size,
+      });
+    };
+
     return (
-      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        onClick={(e) => {
+          if (onClick) {
+            onClick(e);
+          }
+          if (eventName) {
+            handleAnalytics('clicked');
+          }
+        }}
+        {...props}
+      >
+        {children}
+      </Comp>
     );
   },
 );
