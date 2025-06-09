@@ -49,7 +49,7 @@ async function Footer() {
           </Link>
         </p>
         <nav className="flex grow items-center gap-5 md:justify-end">
-          {social.map(({ link, icon }, index) => {
+          {social.map(({ link, icon, title }, index) => {
             const Icon = MENU_ICONS[icon];
 
             return (
@@ -62,6 +62,7 @@ async function Footer() {
                 rel="noopener noreferrer"
               >
                 <Icon className="!size-4" />
+                <span className="sr-only">{title}</span>
               </Link>
             );
           })}
