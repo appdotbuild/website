@@ -61,7 +61,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, eventName, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
 
-    const handleAnalytics = (eventType = 'clicked', text = getNodeText(children)) => {
+    const handleAnalytics = (eventType = 'clicked', customText?: string) => {
+      const text = customText || getNodeText(children);
       sendSegmentEvent(`Button ${eventType}`, {
         text,
         variant,
@@ -77,7 +78,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           if (onClick) {
             onClick();
           }
-          eventName && handleAnalytics('clicked', eventName);
+          if (eventName) {
+            handleAnalytics('clicked');
+          }
         }}
         {...props}
       >
