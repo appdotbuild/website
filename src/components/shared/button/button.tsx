@@ -1,8 +1,12 @@
+'use client';
+
 import * as React from 'react';
 
 import { Slot } from '@radix-ui/react-slot';
 import { type VariantProps, cva } from 'class-variance-authority';
 
+import getNodeText from '@/lib/get-node-text';
+import sendSegmentEvent from '@/lib/send-segment-event';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
@@ -48,14 +52,37 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  eventName?: string;
+  onClick?: () => void;
+  children?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, eventName, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
 
+    const handleAnalytics = (eventType = 'clicked', text = getNodeText(children)) => {
+      sendSegmentEvent(`Button ${eventType}`, {
+        text,
+        variant,
+        size,
+      });
+    };
+
     return (
-      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        onClick={() => {
+          if (onClick) {
+            onClick();
+          }
+          eventName && handleAnalytics('clicked', eventName);
+        }}
+        {...props}
+      >
+        {children}
+      </Comp>
     );
   },
 );
