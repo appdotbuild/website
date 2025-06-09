@@ -88,7 +88,7 @@ function TableOfContents({ className, title, items }: ITableOfContentsProps) {
               )}
               size="sm"
               href={`#${anchor}`}
-              onClick={handleLinkClick(anchor)}
+              onClick={() => handleLinkClick(anchor)}
             >
               {itemTitle}
             </Link>
