@@ -52,7 +52,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps<string>>(
     const handleAnalytics = (eventType = 'clicked') => {
       sendSegmentEvent(`Link ${eventType}`, {
         text: getNodeText(children),
-        variant,
+        theme: variant,
         size,
       });
     };

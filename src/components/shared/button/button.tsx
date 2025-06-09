@@ -23,6 +23,7 @@ const buttonVariants = cva(
         outline:
           'shadow-xs border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        none: '',
       },
       size: {
         default: 'h-9 px-4 py-2 text-sm',
@@ -33,6 +34,7 @@ const buttonVariants = cva(
         xl: 'h-11 px-10 text-[15px] leading-none -tracking-tighter',
         icon: 'size-9',
         badge: 'h-5.5 px-2.5 py-1 text-11 leading-tight -tracking-tighter',
+        none: '',
       },
     },
     defaultVariants: {
@@ -53,7 +55,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   eventName?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children?: React.ReactNode;
 }
 
@@ -65,7 +67,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       const text = customText || getNodeText(children);
       sendSegmentEvent(`Button ${eventType}`, {
         text,
-        variant,
+        theme: variant,
         size,
       });
     };
@@ -74,9 +76,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onClick={() => {
+        onClick={(e) => {
           if (onClick) {
-            onClick();
+            onClick(e);
           }
           if (eventName) {
             handleAnalytics('clicked');

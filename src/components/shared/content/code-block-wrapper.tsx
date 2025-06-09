@@ -123,6 +123,8 @@ function CodeBlockWrapper({
           disabled={isCopied}
           aria-label={cn(isCopied ? 'Copied' : 'Copy')}
           eventName={copyEventName || 'Copy code'}
+          variant="none"
+          size="none"
           onClick={() => handleCopy(code)}
         >
           {isCopied ? <Check size={isCustom ? 16 : 18} /> : <Copy size={isCustom ? 16 : 18} />}
