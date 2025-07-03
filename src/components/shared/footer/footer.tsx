@@ -44,8 +44,8 @@ async function Footer() {
         )}
         <p className="text-14 font-medium text-foreground md:absolute md:left-1/2 md:-translate-x-1/2">
           Built by{' '}
-          <Link href={ROUTE.neon} target="_blank" className="underline">
-            Neon
+          <Link href={ROUTE.databricks} target="_blank" className="underline">
+            Databricks
           </Link>
         </p>
         <nav className="flex grow items-center gap-5 md:justify-end">
